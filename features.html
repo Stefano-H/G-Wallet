@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G-Wallet </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <style>
+
+        @font-face {
+            font-family: 'Euclid Circular B';
+            src: url('./euclid-circular-b-cufonfonts/Euclid%20Circular%20B%20Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Euclid Circular B', sans-serif;
+            background-color: #000000; /* Color de fondo negro */
+            margin-bottom: 60px; /* Espacio para el footer */
+        }
+        .navbar {
+            background-color: blue;
+        }
+        .navbar-brand {
+            color: #f9a825;
+        }
+        .navbar-nav .nav-link {
+            color: #f9a825;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 0.5rem; /* Reduce el margen derecho de los elementos del menú */
+        }
+        .header {
+            background-color: #1c1c1c;
+            color: #f9a825;
+            height: 100%;
+            width: 100%;
+        }
+        .section {
+            background-color: #1c1c1c;
+            color: #ffffff; /* Color de texto blanco */
+        }
+        .footer {
+            background-color: #1c1c1c;
+            color: #f9a825;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Altura del footer */
+        }
+        .colorblanco {
+            color: #ffffff;
+        }
+
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Para un video con aspecto 16:9 */
+            overflow: hidden;
+        }
+
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            left: calc((100% - var(--breakpoint))/2);
+        }
+
+        .banner {
+            width: 100%;
+            /* Añade otras propiedades según sea necesario, como altura, fondo, etc. */
+        }
+
+        #colornaranja {
+            color: #f9a825;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand">
+        <div class="d-flex flex-column flex-md-row ml-3 w-100">
+            <a class="navbar-brand mb-2 mb-md-0" href="/index.html">GWallet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#installation">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#downloads">Downloads</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.google.com/forms/d/1HdVf8Lih2VdGfdiTrBNeGLjGGwDlhwreAEeOjzOX6Ow">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden">
+        <div class="d-flex min-vh-100" lc-helper="video-bg">
+            <video style="z-index:1;object-fit: cover; object-position: 50% 50%;" class="position-absolute w-100 min-vh-100" autoplay="" preload="" muted="" loop="" playsinline="">
+                <!-- adjust object-position to tweak cropping on mobile -->
+                <source src="Video/gwalletheader.mp4" type="video/mp4">
+            </video>
+            <div style="z-index:2" class="align-self-center text-center text-light col-md-8 offset-md-2" >
+                <div class="lc-block mb-4" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+                    <div>
+                        <h1 class="display-1 fw-bolder" id="colornaranja">Bienvenido a GWallet</h1>
+                    </div>
+                </div>
+    
+                <div class="lc-block" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+                    <div>
+                        <p class="lead">La mejor plataforma para gestionar tus criptomonedas de manera anonima y segura.</p>
+    
+                        <p class="lead">No dejes que tus cryptos caigan en malas manos</p>
+                        <a href="ruta-a-tu-archivo" class="btn btn-primary btn-lg" download style="font-size: 1.5em; padding: 10px 20px;">Descarga</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section p-5">
+        <h2 class="text-center">Nuestros Servicios</h2>
+        <!-- Aquí puedes agregar más información sobre los servicios que ofreces -->
+        <!-- Primer Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app2.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercero Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">Access to the decentralized market of associated wallets (DeFi).</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app3.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuarto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Swap tokens.</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app4.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quinto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">Multi tasking with descentralized finance.</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app5.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sexto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Access to Starknet swap.</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app6.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Séptimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app7.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Octavo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app8.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Noveno Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app9.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Décimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app10.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Undécimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app11.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Duodécimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app12.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimotercero Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app13.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimocuarto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app14.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimoquinto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app15.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimosexto Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app16.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimoséptimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app17.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimoctavo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app18.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimonoveno Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app19.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Vigésimo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app20.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Vigésimo primer Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">¡Hola, mundo!</h1>
+                    <p class="lead">Este es un simple hero unit, una simple llamada a la acción con un poco de espacio alrededor.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Llamar a la acción</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="./img/app21.png" alt="Descripción de la imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Vigésimo segundo Hero -->
+        <div class="jumbotron text-dark">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <h1 class="display-4">Interfaz inicial de GWallet</h1>
+                    <p class="lead">Este es otro hero unit, con la imagen a la izquierda y el texto a la derecha.</p>
+                    <hr class="my-4">
+                    <p>Utiliza clases de utilidad para tipografía y espaciado para el espacio de contenido dentro del contenedor más grande.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Otra acción</a>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./img/app22.png" alt="Descripción de la otra imagen" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <footer class="footer text-center p-3">
+        <p>&copy; 2024 Startup Crypto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

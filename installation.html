@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G-Wallet Installation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <style>
+
+@font-face {
+            font-family: 'Euclid Circular B';
+            src: url('./euclid-circular-b-cufonfonts/Euclid%20Circular%20B%20Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Euclid Circular B', sans-serif;
+            background-color: #000000; /* Color de fondo negro */
+            margin-bottom: 60px; /* Espacio para el footer */
+        }
+        .navbar {
+            background-color: #1f1f1f;
+            box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.6); /* Sombra debajo del menú de navegación */
+        }
+        .navbar-brand {
+            color: #f9a825;
+        }
+        .navbar-nav .nav-link {
+            color: #f9a825;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 0.5rem; /* Reduce el margen derecho de los elementos del menú */
+        }
+        .header {
+            background-color: #1c1c1c;
+            color: #f9a825;
+            height: 100%;
+            width: 100%;
+        }
+        .section {
+            background: linear-gradient(143deg,rgba(70,70,70,1) 0%,rgba(0,0,0,1) 55%);
+            color: #ffffff; /* Color de texto blanco */
+        }
+        .footer {
+            background-color: #1c1c1c;
+            color: #f9a825;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Altura del footer */
+        }
+        .colorblanco {
+            color: #ffffff;
+        }
+
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Para un video con aspecto 16:9 */
+            overflow: hidden;
+        }
+
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            left: calc((100% - var(--breakpoint))/2);
+        }
+
+        .banner {
+            width: 100%;
+            /* Añade otras propiedades según sea necesario, como altura, fondo, etc. */
+        }
+
+        #colornaranja {
+            color: #f9a825;
+        }
+
+        #fondohome {
+            background: linear-gradient(143deg,rgba(70,70,70,1) 0%,rgba(0,0,0,1) 55%);
+        }
+
+        
+    </style>
+</head>
+<body id="fondohome">
+    <nav class="navbar navbar-expand">
+        <div class="d-flex flex-column flex-md-row ml-3 w-100">
+            <a class="navbar-brand mb-2 mb-md-0" href="index.html">GWallet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="installation.html">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="downloads.html">Downloads</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.google.com/forms/d/1HdVf8Lih2VdGfdiTrBNeGLjGGwDlhwreAEeOjzOX6Ow">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="m-4 text-white">
+        <h2 class="display-6" id="colornaranja">INSTALLATION</h2>
+        <hr class="my-4">
+        <h2>VirtualBox Installation and OVA Import Manual</h2>
+            <h3>Installing VirtualBox:</h3>
+                <p>Downloading VirtualBox:</p>
+                <ul>
+                    <li>Go to the VirtualBox website: <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></li>
+                    <li>Click on "Downloads" in the navigation menu.</li>
+                    <li>Choose the version for your operating system</li>
+                </ul>
+                <p>Installation</p>
+                <ul>
+                    <li>Run the downloaded installation file.</li>
+                    <li>Follow the installation wizard instructions.</li>
+                    <li>Once the installation is complete, VirtualBox will be ready to use.</li>
+                </ul>
+            <br></br>
+            <h3>Importing the GWallet system's OVA file into VirtualBox:</h3>
+                <p>Downloading the GWallet OVA file:</p>
+                <ul>
+                    <li>Make sure you have the OVA file of the GWallet system that you want to import. It can be a file downloaded from the internet or provided by a developer.</li>
+                </ul>
+                <p>Opening VirtualBox:</p>
+                <ul>
+                    <li>Open VirtualBox from the start menu or application launcher, depending on your operating system.</li>
+                </ul>
+                <p>Importing the OVA file:</p>
+                <ul>
+                    <li>In the VirtualBox main window, click on "File" in the top-left corner and select "Import Appliance...".</li>
+                    <li>The import wizard will open. Click on "Choose a file" and navigate to the GWallet system's OVA file you want to import.</li>
+                    <li>Once the file is selected, click "Next" and then "Import".</li>
+                    <li>VirtualBox will start importing the OVA file. This process may take a few minutes, depending on the file size and your system's speed.</li>
+                </ul>
+                <p>Completion:</p>
+                <ul>
+                    <li>Once the import is complete, you will see the virtual appliance in the list of virtual machines in VirtualBox.</li>
+                    <li>Select the newly imported virtual machine and click "Start" to begin using it.</li>
+                </ul>
+                <br></br>
+                <p>That's it! You have successfully installed VirtualBox and imported the GWallet system's OVA file to use it in a virtual machine. Now you can start working with your virtual environment as needed.</p>
+                <br></br>
+    </div>
+
+
+    <footer class="footer text-center p-3">
+        <p>&copy; 2024 GWallet. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
